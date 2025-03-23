@@ -1,0 +1,159 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_Party",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_aka",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isQualified",
+						"type": "bool"
+					}
+				],
+				"name": "RegisterCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_aka",
+						"type": "string"
+					}
+				],
+				"name": "VoteCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "candidate",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "politicalParty",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isQualified",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "aka",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "noOfVote",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_aka",
+						"type": "string"
+					}
+				],
+				"name": "getTotalNumberOfVotes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalNumberofCandidates",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Features: 1. Add Candidates data : { Name, Age , isQualified ,  } 2. Vote Candidate 3. Get Total number of students*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Voting.sol": "INEC"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Voting.sol": {
+			"keccak256": "0xe7a104058f17caa8a2bb814e69f9368273333300cbda47dffa3ed0485411ba35",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://61416e631a383b9e47dc3a87388f29e78f23909dda13e1a0a5a8d2c64811aae9",
+				"dweb:/ipfs/QmXubvFwYBZXACG8Z5PAjoKRmhF3dNF9mPM2qwPkpScG21"
+			]
+		}
+	},
+	"version": 1
+}

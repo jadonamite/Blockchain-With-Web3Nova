@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_department",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_salary",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_gender",
+						"type": "string"
+					}
+				],
+				"name": "addEmployee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_department",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "fetchSalary",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salary",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_department",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newSalary",
+						"type": "uint256"
+					}
+				],
+				"name": "updateSalary",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"correction.sol": "Salarytracker"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"correction.sol": {
+			"keccak256": "0xa859663f0a47af7ea3bb78f6e80ac26aa26e5c731fce8191531611d97aaf3464",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a4a2d19a4d5aa7c54fb941232ed1ad6f3376ab4dc326e560a1e7e0f5c7f30993",
+				"dweb:/ipfs/QmbKndvkyHLEKsWgB9XZQAG3yywiCv8693Jw2qn1zmieyo"
+			]
+		}
+	},
+	"version": 1
+}

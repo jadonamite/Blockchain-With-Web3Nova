@@ -1,0 +1,183 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_iD",
+						"type": "string"
+					}
+				],
+				"name": "addStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalNumberOfStudents",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_iD",
+						"type": "string"
+					}
+				],
+				"name": "removeStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "student",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "iD",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_iD",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "subjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "marks",
+						"type": "uint256"
+					}
+				],
+				"name": "updateStudentGrade",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_iD",
+						"type": "string"
+					}
+				],
+				"name": "viewStudentsGrade",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "subjectName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "marks",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct StudentRecord.Grade[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"viewStudentsGrade(string)": {
+					"notice": "function updateStudentGrade(string memory _iD, string memory subjectName ,uint marks)public{ Grade memory newGrade = Grade(subjectName , marks); StudentData storage newStudent = student[_iD]; newStudent.grades.push(newGrade); }*"
+				}
+			},
+			"notice": "Features: 1. Add Student data : { Name, Age , ID , Grades } 2. Remove Student data by ID 3. Update Students data 4. Retrieve Students Details 5. Get Total number of students*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Record.sol": "StudentRecord"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Record.sol": {
+			"keccak256": "0x3021892e7ee34a2296eee61ee1c5bc8589041cb0ff20f762434123550e496ad9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b92defc477417f8068d5b149b7e6d34690802a1fa714cfdbfc576c2a288538c1",
+				"dweb:/ipfs/QmdUYhSRHzLrnPrPbi3CB7Bk3xDAUNigtQQaNdWe5hapEd"
+			]
+		}
+	},
+	"version": 1
+}
