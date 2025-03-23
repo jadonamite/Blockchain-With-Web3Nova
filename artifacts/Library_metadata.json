@@ -1,0 +1,249 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "NametoBorrowersIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_bookIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_copies",
+						"type": "uint256"
+					}
+				],
+				"name": "addBook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "booksId",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "copiesRemaining",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bookIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isBorrowed",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isReturned",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "BorrowedBy",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "borrowedBook",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "copiesRemaining",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bookIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isBorrowed",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isReturned",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_borrowedBy",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_copiesBorrowed",
+						"type": "uint256"
+					}
+				],
+				"name": "borrowingBook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "hasBorrowed",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_returnedBy",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_copiesReturned",
+						"type": "uint256"
+					}
+				],
+				"name": "returnedBook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vieBorrowers",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Library.sol": "Library"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Library.sol": {
+			"keccak256": "0xacfe57b26442a1b5707c3e138d101d73f10cfcc385f8544f9273359bb2aee597",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f55d413fd027ff977d8cd23befffee274619042128b4bf5e6e458d70f8f5a8d4",
+				"dweb:/ipfs/Qmed89PqCtF688Ve9SVk8XTWCzThvCmmspdxWXc44iGjNW"
+			]
+		}
+	},
+	"version": 1
+}
