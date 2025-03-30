@@ -23,13 +23,15 @@ contract Library{
 
 
 mapping(string => uint) public NametoBorrowersIndex;
+
+
     mapping (uint => Book) public booksId;
     mapping (string BorrowedBy => mapping (uint => Book) ) public borrowedBook;
    string[] public hasBorrowed;
    uint totalBorrowers;
     
 
-    function addBook(string memory _title,uint _bookIndex, uint _copies )public { 
+function addBook(string memory _title,uint _bookIndex, uint _copies )public { 
         Book storage newBook = booksId[_bookIndex];
         newBook.title = _title;
         newBook.copiesRemaining =_copies;

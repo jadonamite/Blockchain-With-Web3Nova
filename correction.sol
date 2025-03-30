@@ -11,8 +11,8 @@ pragma solidity 0.8.26;
 
             mapping(string department => mapping(string _name => Employee )) EmployeeDetails;
 
-            function addEmployee(string memory _department, string memory _name ,uint  _salary, string memory _gender)  external{
-                EmployeeDetails[_department][_name] = Employee(_name, _salary , msg.sender,_gender);
+           function addEmployee(string memory _department, string memory _name ,uint  _salary, string memory _gender)  external{
+                 EmployeeDetails[_department][_name] = Employee(_name, _salary , msg.sender,_gender);
    
          }  
             function updateSalary(string memory _department, string memory _name, uint256 _newSalary) public {
