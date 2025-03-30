@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favouriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "storefavouriteNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Imports and Interfaces/UserDetail.sol": "UserDetail"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Imports and Interfaces/Banking.sol": {
+			"keccak256": "0xe86e9aaeb8267c3c45cec6a06bb1bb025d475473557f523989aacacf091f93b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://076a7f6820fd93a3ac62f9cf41491122950e9e729db555740625d95c2b9a5dc8",
+				"dweb:/ipfs/QmVuWkFLFyUEZeSXJnSKc7ADusrx4Wjugkcows8Stis1EE"
+			]
+		},
+		"Imports and Interfaces/UserDetail.sol": {
+			"keccak256": "0xe53652ca6cb5ff0d505a7a65ffe3e92a42df89bc1394ed3be5eb8ba0be931b66",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://340b97d432b32e90b3cbd2db477fca2e32199f03ff7ba5f479f10222fe98593e",
+				"dweb:/ipfs/QmfWxtSjhY2W6jwQT1hbxw1LkuiPVe38JPq5oyJZ78bNi1"
+			]
+		}
+	},
+	"version": 1
+}
