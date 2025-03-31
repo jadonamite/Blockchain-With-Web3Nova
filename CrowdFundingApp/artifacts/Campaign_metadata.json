@@ -150,6 +150,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getActiveCampaigns",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getAllCampaigns",
 				"outputs": [
 					{
@@ -170,19 +183,6 @@
 					}
 				],
 				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getCampaign",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -338,11 +338,11 @@
 	},
 	"sources": {
 		"CrowdFundingApp/Campaign.sol": {
-			"keccak256": "0x1f05868f0ddeecbb7f93fa70e81d641b9fefba55fbe24c23b6d414369502d663",
+			"keccak256": "0xe6166da4fb65ca165753c8bc274bbb468a4150d2bdaf4ebeef46661657a0e09c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://939be1fd3a8ce7ffd3615c6a38dcb3a4b44730a709fce3afdbfef29bd31535f9",
-				"dweb:/ipfs/Qma5uwhiZW7waptMBm58KLd7qnacsbvtu2pWVvnXPMGNbi"
+				"bzz-raw://14fb0cb374945b11d088b6c8e5f5add01c9eb700bed28f851818c8f2a7a61cca",
+				"dweb:/ipfs/QmXKQqTuHQXweUNJXAiFaB9weGLvgt3qMJZmszvWWzuwtx"
 			]
 		},
 		"CrowdFundingApp/Factory.sol": {
