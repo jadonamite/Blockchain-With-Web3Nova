@@ -35,16 +35,17 @@ contract Campaign is Factory {
         campaignList.push (newCampaign);
          addressToAmount[msg.sender] = contribution;
         contributorsList[msg.sender].campaignToVote = title;
+        contributors.push(msg.sender);
         allContributors.push(Contributor(title, msg.sender, contribution));
       
       }
     function getCampaign() public view returns (uint){
-        return campaignCount;
-      }
-     mapping(string => Campaign)  public titleToCampaign; // Title to Campaign address map
+        getAllCampaigns() ;
+        return campaignList.length;
+      
+    //  mapping(string => Campaign)  public titleToCampaign; // Title to Campaign address map
  
-          
-       uint private campaignCount;
+      //  uint private campaignCount;
         
       }
       function getBalance(string memory title ) public view returns (uint){
