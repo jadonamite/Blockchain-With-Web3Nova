@@ -13,8 +13,14 @@ contract Factory{
     }
 Campaign[] public campaignList;
 mapping (string => Campaign) public titleToCampaign;
+string [] public titleToCampaign;
 
-function addCampaign(address payable beneficiary, string memory title,uint deadline, uint amountToRaise) public {
+function addCampaign(
+    address payable beneficiary,
+    string memory title,
+    uint deadline,
+    uint amountToRaise
+  ) public {
 
      // Check if a campaign with the same title already exists
     require(bytes(titleToCampaign[title].title).length == 0, "Campaign with this title already exists");
@@ -26,10 +32,11 @@ function addCampaign(address payable beneficiary, string memory title,uint deadl
     require(bytes(title).length > 0, "Your campaign no get name");
     
     // Ensure deadline is in the future
-    require(deadline > block.timestamp, "Sheee you are wise now");
+    // require(deadline > block.timestamp, "Sheee you are wise now");
     
     // Ensure amount to raise is greater than zero
     require(amountToRaise > 0, "Bruhh can you not do that?");
+
 
     // Creating a new campaign and adding it to an array
 
@@ -45,8 +52,23 @@ function addCampaign(address payable beneficiary, string memory title,uint deadl
     // titleToCampaign[title] = newCampaign;
 }
 
+// function getCampaigns(string memory title)public view returns(
+//     address payable beneficiary,
+//     uint raisedAmount,
+//     uint deadline
+//     ){
+//     return (
+//       titleToCampaign[title].beneficiary ,
+//         titleToCampaign[title].raisedAmount,
+//           titleToCampaign[title].deadline,
+//     )
 
+// }
+function getAllCampaigns() public pure returns(string[] memory  ){
+    return _campaignList;
+   return c
 
 }
 
 
+}
