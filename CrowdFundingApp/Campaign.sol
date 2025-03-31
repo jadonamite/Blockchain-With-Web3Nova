@@ -14,7 +14,10 @@ contract Campaign is Factory {
       
       address[] public contributors; // Addresses of the contributers
       Contributor[] public allContributors;
-0x5B38Da6a701c568545dCfcB03FcB875f56beddC4Count = contributors.length;
+      mapping (uint => address) contributorId;
+      mapping(address => Contributor)  contributorsList;
+      mapping(address => uint) addressToAmount;
+      uint contributorCount = contributors.length;
 
 
 
