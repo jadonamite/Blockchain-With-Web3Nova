@@ -13,62 +13,81 @@ contract Factory{
     }
 Campaign[] public campaignList;
 mapping (string => Campaign) public titleToCampaign;
-string [] public titleToCampaign;
+// string [] public titleOfCampaigns;
 
-function addCampaign(
+function createCampaign(
     address payable beneficiary,
     string memory title,
     uint deadline,
     uint amountToRaise
   ) public {
-
      // Check if a campaign with the same title already exists
-    require(bytes(titleToCampaign[title].title).length == 0, "Campaign with this title already exists");
-    
+    require(bytes(titleToCampaign[title].title).length == 0, "Guy you no fit create name nii");
+
     // Ensure beneficiary address is not zero address
     require(beneficiary != address(0), "Which kind address be this");
     
     // Ensure title is not empty
     require(bytes(title).length > 0, "Your campaign no get name");
-    
-    // Ensure deadline is in the future
-    // require(deadline > block.timestamp, "Sheee you are wise now");
-    
+
     // Ensure amount to raise is greater than zero
     require(amountToRaise > 0, "Bruhh can you not do that?");
 
 
-    // Creating a new campaign and adding it to an array
+    // This Section of code would be suitable if a campaign would be Updated in the near future 
+    // Campaign memory newCampaign = titleToCampaign[title];
+    // newCampaign.campaignOwner = payable(msg.sender);
+    // newCampaign.beneficiary  = beneficiary;
+    // newCampaign.title   = title;
+    // newCampaign.deadline    = deadline;
+    // newCampaign.amountToRaise= amountToRaise;
+    // newCampaign.raisedAmount = 0;
+    // newCampaign.closed    = false;
+    // campaignList.push (newCampaign);
 
-    Campaign memory newCampaign = titleToCampaign[title];
-    newCampaign.campaignOwner = payable(msg.sender);
-    newCampaign.beneficiary  = beneficiary;
-    newCampaign.title   = title;
-    newCampaign.deadline    = deadline;
-    newCampaign.amountToRaise= amountToRaise;
-    newCampaign.raisedAmount = 0;
-    newCampaign.closed    = false;
-    campaignList.push (newCampaign);
-    // titleToCampaign[title] = newCampaign;
-}
+    Campaign memory newCampaign = Campaign({
+        campaignOwner: payable(msg.sender),
+        beneficiary :   beneficiary,
+        title       :  title,
+        deadline     :deadline ,
+        amountToRaise:amountToRaise,
+        raisedAmount    :0,
+        closed            :false
+    });
 
-// function getCampaigns(string memory title)public view returns(
-//     address payable beneficiary,
-//     uint raisedAmount,
-//     uint deadline
-//     ){
-//     return (
-//       titleToCampaign[title].beneficiary ,
-//         titleToCampaign[title].raisedAmount,
-//           titleToCampaign[title].deadline,
-//     )
-
-// }
-function getAllCampaigns() public pure returns(string[] memory  ){
-    return _campaignList;
-   return c
+titleToCampaign[title] = newCampaign;
+campaignList.push(newCampaign);
 
 }
 
+function closeCampaign(string memory title) public {
+    // Check if the campaign is already closed
+    require(!titleToCampaign[title].closed, "This campaign has been already closed");
+
+        Campaign memory newCampaign = titleToCampaign[title];
+        newCampaign.closed    = false;
+        titleToCampaign[title] = newCampaign;
+        campaignList.push(newCampaign);
+
+   
+
+
+}
+
+function getCampaigns(string memory title) public view returns(
+    address payable beneficiary,
+    uint raisedAmount,
+    uint deadline
+) {
+    return (
+        titleToCampaign[title].beneficiary,
+        titleToCampaign[title].raisedAmount,
+        titleToCampaign[title].deadline
+    ); // Remove the extra comma
+}
+
+function getAllCampaigns() public view returns(Campaign[] memory) {
+    return campaignList;
+}
 
 }

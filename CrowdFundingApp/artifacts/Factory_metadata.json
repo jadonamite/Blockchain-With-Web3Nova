@@ -8,34 +8,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "beneficiary",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "title",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "deadline",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amountToRaise",
-						"type": "uint256"
-					}
-				],
-				"name": "addCampaign",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -83,6 +55,47 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					}
+				],
+				"name": "closeCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountToRaise",
+						"type": "uint256"
+					}
+				],
+				"name": "createCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getAllCampaigns",
 				"outputs": [
@@ -125,11 +138,40 @@
 							}
 						],
 						"internalType": "struct Factory.Campaign[]",
-						"name": "_campaignList",
+						"name": "",
 						"type": "tuple[]"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					}
+				],
+				"name": "getCampaigns",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "raisedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -210,11 +252,11 @@
 	},
 	"sources": {
 		"CrowdFundingApp/Factory.sol": {
-			"keccak256": "0x35cb92306451c58c8045fa3ae002fe5b6d7329ee4834a898f1c60b63e3655d0c",
+			"keccak256": "0x99713845a264feabb56f98028f91016a2bf9f87141ea7d49be4d0785438732eb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://207141e718b67a414ee37d7f2e33df360fc3f0d3dd08e9e37a77ccbb1990bb03",
-				"dweb:/ipfs/Qme5YvUWMVvRAQgZFMHZV74X9PctC9ifVpFw3tDEwzpdBR"
+				"bzz-raw://b173a076f4164e0db3d01b768e882e2e1073a3b005fdab526becdaa525a51fc0",
+				"dweb:/ipfs/QmQJwnBuJ2e1HC1odFw3iKyRXaB62czYm5uRHBhKsAkb4L"
 			]
 		}
 	},
