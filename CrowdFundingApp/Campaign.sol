@@ -33,7 +33,9 @@ contract Campaign is Factory {
       // }
 
       function contribute(string memory title,uint contribution)public payable {
-        
+        Campaign memory newCampaign = titleToCampaign[title];  
+    // newCampaign.raisedAmount = 0;
+    // campaignList.push (newCampaign);
       }
       function getBalance(string memory title ) public view returns (uint){
         return titleToCampaign[title].raisedAmount;
