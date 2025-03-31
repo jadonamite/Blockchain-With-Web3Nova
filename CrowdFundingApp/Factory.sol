@@ -60,19 +60,7 @@ campaignList.push(newCampaign);
 
 }
 
-function closeCampaign(string memory title) public {
-    // Check if the campaign is already closed
-    require(!titleToCampaign[title].closed, "This campaign has been already closed");
 
-        Campaign memory newCampaign = titleToCampaign[title];
-        newCampaign.closed    = false;
-        titleToCampaign[title] = newCampaign;
-        campaignList.push(newCampaign);
-
-   
-
-
-}
 
 function getCampaigns(string memory title) public view returns(
     address payable beneficiary,
@@ -83,11 +71,19 @@ function getCampaigns(string memory title) public view returns(
         titleToCampaign[title].beneficiary,
         titleToCampaign[title].raisedAmount,
         titleToCampaign[title].deadline
-    ); // Remove the extra comma
+    ); 
 }
 
-function getAllCampaigns() public view returns(Campaign[] memory) {
-    return campaignList;
+
+function getAllCampaigns() public view returns (string[] memory) {
+    string[] memory titles = new string[](campaignList.length);
+    
+    for (uint i = 0; i < campaignList.length; i++) {
+        titles[i] = campaignList[i].title;
+    }
+    
+    return titles;
 }
+
 
 }
