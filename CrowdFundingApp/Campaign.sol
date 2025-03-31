@@ -39,7 +39,7 @@ contract Campaign is Factory {
         allContributors.push(Contributor(title, msg.sender, contribution));
       
       }
-    function getCampaign() public view returns (uint){
+    function getActiveCampaigns() public view returns (uint){
         getAllCampaigns() ;
         return campaignList.length;
       
