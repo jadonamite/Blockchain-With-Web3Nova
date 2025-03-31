@@ -338,11 +338,11 @@
 	},
 	"sources": {
 		"CrowdFundingApp/Campaign.sol": {
-			"keccak256": "0xe6166da4fb65ca165753c8bc274bbb468a4150d2bdaf4ebeef46661657a0e09c",
+			"keccak256": "0x44eadbae7aa72bf200cb4958236d1abce0c878c6848375d11420e244b7167adb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://14fb0cb374945b11d088b6c8e5f5add01c9eb700bed28f851818c8f2a7a61cca",
-				"dweb:/ipfs/QmXKQqTuHQXweUNJXAiFaB9weGLvgt3qMJZmszvWWzuwtx"
+				"bzz-raw://a971536c20ba08c55b71244e8323496b0a372f346145879c6f5c4e928f7b43d6",
+				"dweb:/ipfs/QmX8tTo8x1ynYTnEztdycXqQUrgUTRjLi6EJ6JyiTW5J4Z"
 			]
 		},
 		"CrowdFundingApp/Factory.sol": {

@@ -14,10 +14,7 @@ contract Campaign is Factory {
       
       address[] public contributors; // Addresses of the contributers
       Contributor[] public allContributors;
-      mapping (uint => address) contributorId;
-      mapping(address => Contributor)  contributorsList;
-      mapping(address => uint) addressToAmount;
-      uint contributorCount = contributors.length;
+0x5B38Da6a701c568545dCfcB03FcB875f56beddC4Count = contributors.length;
 
 
 
@@ -29,7 +26,7 @@ contract Campaign is Factory {
       //   contributorId[contribution] = contributersList[contributerAddress].name;
 
       function contribute(string memory title,uint contribution)public payable {
-        require(contribution >= 10000 gwei, "No stingy contributions Here");
+        require(contribution < 10 gwei, "No stingy contributions Here");
         Campaign memory newCampaign = titleToCampaign[title];  
         newCampaign.raisedAmount += contribution;
         campaignList.push (newCampaign);
