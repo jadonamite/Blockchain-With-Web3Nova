@@ -17,25 +17,20 @@ contract Campaign is Factory {
       mapping (uint => address) contributorId;
       mapping(address => Contributor)  contributorsList;
       mapping(address => uint) addressToAmount;
+      uint contributorCount = contributors.length;
 
 
-      // function contribute(uint contribution)public payable{
-      //   require(contribution >= 1 ether);
-      //   uint contributorCount = contributors.length;
-      //   require(contributorCount < 5,"Already 5 Contributers");
-      //   address contributerAddress = msg.sender;
+
+        
+
       //   require(!contributingInProcess[contributerAddress]);
       //   contributingInProcess[contributerAddress] = true;
       //   contributors.push(contributerAddress);
       //   contributorId[contribution] = contributersList[contributerAddress].name;
-      //   allContributors.push(Contributor(contributersList[contributerAddress].name,msg.sender, contribution));
-      //   contributorsCount
-      // }
 
       function contribute(string memory title,uint contribution)public payable {
+        require(contribution >= 10000 gwei, "No stingy contributions Here");
         Campaign memory newCampaign = titleToCampaign[title];  
-       
-        newCampaign.contributorCount += 1;
         newCampaign.raisedAmount += contribution;
         campaignList.push (newCampaign);
          addressToAmount[msg.sender] = contribution;
