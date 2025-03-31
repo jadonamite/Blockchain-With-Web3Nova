@@ -32,6 +32,9 @@ contract Campaign is Factory {
       //   contributorsCount
       // }
 
+      function contribute(string memory title,uint contribution)public payable {
+        
+      }
       function getBalance(string memory title ) public view returns (uint){
         return titleToCampaign[title].raisedAmount;
       }
