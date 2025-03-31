@@ -83,6 +83,56 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getAllCampaigns",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address payable",
+								"name": "campaignOwner",
+								"type": "address"
+							},
+							{
+								"internalType": "address payable",
+								"name": "beneficiary",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountToRaise",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "raisedAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "closed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Factory.Campaign[]",
+						"name": "_campaignList",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -160,11 +210,11 @@
 	},
 	"sources": {
 		"CrowdFundingApp/Factory.sol": {
-			"keccak256": "0xffa422d528e6451c620683d7f818fc5e18ad448eb897b0bc6f4461b6a5fa1bdc",
+			"keccak256": "0x35cb92306451c58c8045fa3ae002fe5b6d7329ee4834a898f1c60b63e3655d0c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://57b564c7d66c866a2efa0fa8e85f4e78b3158bca743e73ccb0a8f23b19a7a8d8",
-				"dweb:/ipfs/QmcdAb1EM9fLwqrzC3xV1kf6EbwdzozHdMaVxrg6Rt5Dho"
+				"bzz-raw://207141e718b67a414ee37d7f2e33df360fc3f0d3dd08e9e37a77ccbb1990bb03",
+				"dweb:/ipfs/Qme5YvUWMVvRAQgZFMHZV74X9PctC9ifVpFw3tDEwzpdBR"
 			]
 		}
 	},
