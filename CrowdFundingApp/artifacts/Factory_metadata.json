@@ -57,19 +57,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "title",
-						"type": "string"
-					}
-				],
-				"name": "closeCampaign",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "address payable",
 						"name": "beneficiary",
 						"type": "address"
@@ -100,46 +87,9 @@
 				"name": "getAllCampaigns",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "address payable",
-								"name": "campaignOwner",
-								"type": "address"
-							},
-							{
-								"internalType": "address payable",
-								"name": "beneficiary",
-								"type": "address"
-							},
-							{
-								"internalType": "string",
-								"name": "title",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "deadline",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "amountToRaise",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "raisedAmount",
-								"type": "uint256"
-							},
-							{
-								"internalType": "bool",
-								"name": "closed",
-								"type": "bool"
-							}
-						],
-						"internalType": "struct Factory.Campaign[]",
+						"internalType": "string[]",
 						"name": "",
-						"type": "tuple[]"
+						"type": "string[]"
 					}
 				],
 				"stateMutability": "view",
@@ -252,11 +202,11 @@
 	},
 	"sources": {
 		"CrowdFundingApp/Factory.sol": {
-			"keccak256": "0x99713845a264feabb56f98028f91016a2bf9f87141ea7d49be4d0785438732eb",
+			"keccak256": "0x10e6406bccd6ba1b5069c5d677f81fff3bce9c12434960c1ab0d3a16c3d6e74e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b173a076f4164e0db3d01b768e882e2e1073a3b005fdab526becdaa525a51fc0",
-				"dweb:/ipfs/QmQJwnBuJ2e1HC1odFw3iKyRXaB62czYm5uRHBhKsAkb4L"
+				"bzz-raw://35f8138212b10b303b8f22718fe8575ad34dc7205a8d6ba63044f105433275b7",
+				"dweb:/ipfs/QmbVPSeQMT7sBGfRUVXEUbCnzgssswDFEhg3emAr7yzvUS"
 			]
 		}
 	},
