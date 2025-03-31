@@ -7,7 +7,7 @@ import {Factory} from "CrowdFundingApp/Factory.sol";
 contract Campaign is Factory {
 
     struct Contributor{
-        string name;
+        string campaignToVote;
         address contributorAddress;
         uint contributions;
       }
@@ -34,8 +34,23 @@ contract Campaign is Factory {
 
       function contribute(string memory title,uint contribution)public payable {
         Campaign memory newCampaign = titleToCampaign[title];  
-    // newCampaign.raisedAmount = 0;
-    // campaignList.push (newCampaign);
+       
+        newCampaign.contributorCount += 1;
+        newCampaign.raisedAmount += contribution;
+        campaignList.push (newCampaign);
+         addressToAmount[msg.sender] = contribution;
+        contributorsList[msg.sender].campaignToVote = title;
+        allContributors.push(Contributor(title, msg.sender, contribution));
+      
+      }
+    function getCampaign() public view returns (uint){
+        return campaignCount;
+      }
+     mapping(string => Campaign)  public titleToCampaign; // Title to Campaign address map
+ 
+          
+       uint private campaignCount;
+        
       }
       function getBalance(string memory title ) public view returns (uint){
         return titleToCampaign[title].raisedAmount;
